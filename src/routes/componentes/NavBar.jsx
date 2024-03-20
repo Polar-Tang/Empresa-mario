@@ -38,7 +38,7 @@ export const NavBar = () => {
           <a  className="nav-link dropdown-toggle anchor2 start-100 float-lg-end anchor grande" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Vendemos Repuestos
           </a>
-          <ul className="dropdown-menu grande ">
+          <ul className="dropdown-menu grande">
             <li><FontAwesomeIcon icon={faUser} /><NavLink className=" droping  anchor2 fs-6" href="#">Conectarse</NavLink></li>
             <li><FontAwesomeIcon icon={faClipboard} /><NavLink to='productos' className=" droping anchor2 fs-6">Productos</NavLink></li>
             <NavLink to='/carrito'>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Imagen } from './Imagen'
 
 export const Contact = () => {
   return (
@@ -6,7 +7,7 @@ export const Contact = () => {
         <div className="activedd container">
       <h2 className="active3">Contanos tu problema</h2>
       <label htmlFor="nombre">
-        <p> Nombre:</p>
+        <p className='pe'> Nombre:</p>
       </label>
       <input
         style={{ gridArea: 'nombre' }}
@@ -20,7 +21,7 @@ export const Contact = () => {
       />
       <br />
       <label htmlFor="mail">
-        <p> Email: </p>
+        <p className='pe'> Email: </p>
       </label>
       <br />
       <input
@@ -54,6 +55,7 @@ export const Contact = () => {
       </a>
       <br />
 </div>
+<Imagen></Imagen>
     </div>
   )
 }

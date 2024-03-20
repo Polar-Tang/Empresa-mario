@@ -5,6 +5,170 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
   
+  .logo{
+    font-family: "oswald";
+    color: white;
+    font-size: 22px;
+    padding-left: 10px;
+}
+.encabezado{
+    overflow: hidden;
+    background-color: #E6E7E8;
+    height: 50vh;
+}
+#logo{
+    width: 100%;
+    text-align: center;   
+}
+#logo a img{
+    width: 50%;
+    
+}
+#opciones{
+    text-align: center;
+}
+/* ul li{
+    list-style-type: none;
+    font-size: 2rem;
+} */
+/* a{
+    text-decoration: none;
+    color: #33383C;
+    padding: 10px;
+}
+a:hover{
+    color: black;
+    text-decoration: underline;
+    
+} */
+
+button:hover{
+    background-color: #FF6C20;
+    color: white;
+    border-radius: 10px;
+}
+
+.banner{
+    background-image: url('./repare.jpg');
+    image-rendering: 2px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    width: 100%;
+    height: 50vh;
+}
+.titulo{
+    font-size: 3rem;
+    color: #FF6C22;
+    text-align: center;
+    padding-top: 80px;
+}
+
+#productos{
+    background-color: #141947;
+    text-align: center;
+    padding: 10px;
+    font-size: 2.2rem;
+}
+
+
+
+article img{
+    width: 100%;
+    opacity: 1;
+}
+
+article img:hover{
+    opacity: 0.8;
+}
+/* p{
+    text-align: justify;
+} */
+.productos{
+    overflow: hidden;
+}
+
+
+article{
+    width: 100%;
+    padding: 0%;
+    position: relative;
+    padding-right: calc(var(--bs-gutter-x)* .2);
+    padding-left: calc(var(--bs-gutter-x)* .2);
+    padding-right: 0%;
+    padding-left: 0%;
+}
+
+/* p{
+    border-top: double 3px #FF6C22;
+} */
+
+
+ @media  (min-width: 768px){
+    .encabezado{
+        height: 15vh;
+        position: fixed;
+        z-index: 1;
+    }
+    #logo{
+        float: left;
+        width: 20%;
+        padding-left: 10px;
+        padding-top: 15px;
+    }
+    #logo a img{
+        width: 100%;
+    }
+    #opciones{
+        padding-top: 30px;
+        float: right;
+        
+        text-align: right;
+    }
+
+    
+
+    .titulo{
+        font-size: 4rem;
+        color: #FF6C22;
+        text-align: center;
+        padding-top: 200px;
+    }
+    
+    #productos{
+        background-color: #141947;
+        text-align: center;
+        padding: 10px;
+    }
+   
+    .productos{
+        overflow: hidden;
+    }
+    /* article{
+        float: left;
+        width: 50%; 
+        padding: 10px;
+        position: relative;
+    } */
+
+}
+
+@media (min-width: 992px){
+    /* article{
+        width: 25%;
+    } */
+    .banner{
+        background-size: cover;
+        background-image: url('./repare.jpg');
+    }    
+    #logo{
+        padding-top: 0;
+    }
+    #logo a img{
+        width: 70%;
+    }
+
+} 
 
 
   code {
@@ -75,9 +239,9 @@ body {
 
 }
 
-.buttton:hover{
+/* .buttton:hover{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0  6px 20px 0 rgba(0,0,0,.19);
-}
+} */
 
 footer img{
   width: 100px;
@@ -149,11 +313,11 @@ nav a{
 
 
 
-a:hover{
+/* a:hover{
   text-shadow: -2px -2px 4px #fff;
   cursor: pointer;
 
-}
+} */
 
 
 .activedd{
@@ -265,6 +429,352 @@ li{
 
 p{
   color: #fff;
+  font-family: "oswald";
+}
+*{
+  font-family: "oswald";
+}
+
+h2{
+  color: #fff;
+  width: 100%;
+  font-size: 40px;
+}
+
+.pe{
+  color: #fff;
+}
+#miImagen{
+  background-color: #2B3499;
+  border-radius: 20px;
+  height: auto;
+  width: 8vh;
+}
+
+#miImagen:hover{
+  opacity: 1;
+  border-radius: 2px;
+}
+
+.active3{
+  margin-top: 1rem;
+  color: #fff;
+  font-family: "oswald";
+  font-size: 3rem;
+}
+.type1{
+  background-color: #FF6C22;
+}
+
+input[type="submit"]{
+  width: 100%;
+  background-color: #FF6C22;
+  color: white;
+  padding: 15px 20px;
+  /* margin: 8px 0; */
+  border: none;
+    border-radius: 10px;
+  cursor: #FF6C22;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea{
+    width: 100%;
+    padding: 10px;
+    /* margin: 8px 0; */
+    border: 1px solid rgb(70, 70, 70);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+footer{
+  background-color: #ff6c2213;
+  align-items: center;
+  border: 0%;
+  width: 100%;
+}
+
+
+.experiencia .rox div{
+  height: 259px;
+  
+}
+
+.foot3{
+  font-size: 15px;
+}
+
+.foot{
+  color: #2B3499;
+}
+
+.foot::before{
+  content: url(/index/icons8-instagram-48.png);
+}
+
+.foot2::before{
+  content: url(/index/icons8-whatsapp-48.png);
+}
+
+.foot2{
+  color: #2B3499;
+}
+
+.responsive{
+  display: none;
+}
+
+/* i{
+  padding: 0 5px;
+} */
+
+@media (max-width: 600px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .footer .content1{
+    grid-column: 1/ -1;
+  }
+  .footer .content2{
+    grid-column: 2/-5;
+  }
+  .foorer .content3{
+    grid-column: 3/-4;
+  }
+}
+
+
+
+@media (max-width:600px){
+  .responsive{
+      display: block;
+      float: right;
+      padding: 12px;
+  }
+  /* a{
+      display: none;
+    } */
+}
+
+.namedd{
+  height: 20px;
+}
+
+footer div img{
+  height: 1vh;
+  width: auto;
+}
+
+footer{
+  width: 100%;
+}
+
+Footer{
+  width: 100%;
+}
+
+.row{
+align-items: center;
+}
+
+.fluido{
+border: 0% !important;
+padding: 0%;
+width: 100%;
+}
+
+@media (min-width:992px){
+.grande{
+  width: 300px;
+}
+}
+
+body{
+  background-color: #FFD099;    
+
+}
+
+body div:first-child{
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* header{
+  background-color: #2B3499;
+  padding: 10px;
+  margin-top: 0;
+  display: grid; 
+  grid-template-rows: 2fr;
+  grid-template-columns: 3fr;
+  grid-row: 1/-1;
+
+  border-radius: 4px;
+  flex-wrap: wrap;
+  width: 100%;
+  z-index: 10;
+
+} */
+
+/* .mierda{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    justify-content: center; 
+    align-items: center;
+}
+
+.mierda a{
+  text-decoration: none;
+
+} */
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+color: #FF6C22; /* Cambia el color del texto */
+}
+
+.navbar-nav .nav-item.active {
+  color: #FF6C22; /* Cambia el color del texto */
+}
+
+.navbar{
+  --bs-navbar-active-color: #FF6C22;
+  
+}
+
+
+
+nav a{
+  border-radius: 4px;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "oswald";
+  transition: 2s;
+  padding: 8px 16px;
+} 
+
+
+
+/* a:hover{
+  text-shadow: -2px -2px 4px #fff;
+  cursor: pointer;
+
+} */
+
+
+.activedd{
+  background-color: #2b34999d;
+  border-radius: 5px solid #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Aquí 3 es el número de columnas y 1fr indica que deben tener el mismo ancho */
+  gap: 7px;
+  /* grid-template-rows: repeat(3,minmax(100px,1fr)); */
+  grid-template-rows: 1.5fr 1fr 1fr 1fr 0.5fr;
+  min-height: 100vh;
+  grid-template-areas: 
+  " active3 active3 active3"
+  "email mail ."
+  "namedd nombre . "
+  "text text text"
+  " . boton . "
+
+  ;
+  justify-content: space-between;
+  text-align: center;
+  
+}
+
+.activedd h2:first-child{
+  width: 100%;
+  grid-area: active3;
+}
+
+.activedd label{
+  width: 100%;
+  grid-area: namedd;
+}
+
+.activedd input:first-child{
+  grid-area: nombre;
+}
+
+.activedd label:nth-child(2){
+  grid-area: email;
+}
+
+.activedd input:nth-child(2){
+  grid-area: mail;
+}
+
+.activedd textarea{
+  width: 100%;
+  grid-area: text;
+
+}
+
+.activedd input:nth-child(3){
+  grid-area: boton;
+}
+
+.punto{
+  grid-area: boton;
+}
+
+.active2{
+  
+  display: flex;
+  position: relative;
+  justify-content: center;
+  max-height: 100px;
+  max-width: 100%;
+
+}
+
+.hiden{
+  visibility: 'hidden'
+}
+
+.text{
+  display: flex;
+  /* box-sizing: border-box; */
+  text-align: justify;
+  width: 100%;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.punto:hover{
+  cursor: pointer;
+}
+
+li{
+  color: #2B3499;
+  /* padding: 5px; */
+  list-style: none;
+
+}
+
+.foot4{
+  color: #2B3499;
+  border-style: solid;
+  border-width: 1px ;
+  width: 100%;
+  justify-items: center;
+  text-align: center;
+}
+
+.foot3{
+  color: #2B3499;
+  border-style: solid;
+  border-width: 1px ;
+}
+
+p{
+  color: #2B3499;
   font-family: "oswald";
 }
 *{
@@ -412,4 +922,13 @@ width: 100%;
 .grande{
   width: 300px;
 }
+}
+
+article{
+  width: 100%;
+}
+
+.container-fluid{
+--bs-gutter-x: 0%;
+
 }
