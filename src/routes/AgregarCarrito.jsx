@@ -1,20 +1,39 @@
-import { useContext } from "react";
-import './ProductoScreen'; // Asegúrate de que este import se encuentre correctamente, o si no se necesita, puedes eliminarlo.
-import { ProductosContext } from "./ProductosContext";
+import { useContext, useState } from "react";
+import { CarritoContext } from "./context/CarritoContext";
 
-export const AgregarCarrito = () => {
-    const { reloj } = useContext(ProductosContext);
-    const { agregarCompra } = useContext(CarritoContext);
+export const AgregarCarrito = ( ) => {
+    
+    const [added, setAdded] = useState(false)
+    const { agregarCompra, eliminarCompra } = useContext(CarritoContext)
 
-    const handleAgregar = () => {
-        agregarCompra(reloj);
-    };
+
+
+    
+    const clickAgregar = (compra) => {
+        agregarCompra(compra)
+        setAdded(true)
+    }
+    const clickQuitar = (id) => {
+        eliminarCompra(id)
+        setAdded(false)
+    }
+
     return (
-        <div>
-            <button className='button col-12' 
-            onClick={handleAgregar}>
-                Agregar al carrito
+         <div>
+        { added 
+            ?<button  className="col-12 button boton-quitar" 
+            onClick={clickQuitar}
+            type="button"
+            >
+                Quitar del carrito
             </button>
+           : <button className='button boton-agregar col-12' 
+            onClick={clickAgregar}
+            type="button"
+            >
+                Agregar al carrito
+             </button>
+        }
         </div>
     );
 };

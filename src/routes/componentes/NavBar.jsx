@@ -10,11 +10,12 @@ import ice from '../ice-24.png'
 
 import { Badge } from "@mui/material"
 import { ShoppingCart } from "@mui/icons-material"
+import { useContext } from "react";
+import { CarritoContext } from "../context/CarritoContext";
 
 
 export const NavBar = () => {
-
-
+  const { listaCompras } = useContext(CarritoContext);
   return (
     <>
     <nav className="container-fluid navbar-nav d-grid justify-content-md-center navbar navbar-color bg-body-tertiary navbar-expand-lg" >
@@ -39,7 +40,7 @@ export const NavBar = () => {
         Nuestros productos
       </a>
   
-      <ul className="dropdown-menu">
+      <ul className="dropdown-menu z-3">
         <img className='loguito' src={air}/><NavLink className="droping fs-6 anchor2" data-bs-toggle="dropdown" aria-expanded="false">Repuesto para aires acondicionados</NavLink>
         <li><hr className="dropdown-divider"/></li>
         <img className='loguito' src={ice}/><NavLink className="droping fs-6 anchor2" data-bs-toggle="dropdown" aria-expanded="false">Repuesto para heladeras</NavLink>
@@ -50,7 +51,7 @@ export const NavBar = () => {
    <li className="login-link align-self-center login float-end align-content">
       <NavLink className=" align-self-center droping anchor2 fs-6" href="#"><FontAwesomeIcon icon={faUser} />Login</NavLink></li>
    <NavLink to='/carrito' className='align-self-center carrito float-end rounded mx-auto d-block align-self-center'>
-      <Badge badgeContent={2} color="secondary">
+      <Badge badgeContent={listaCompras.length} color="secondary">
         <ShoppingCart color="action" />
       </Badge>
     </NavLink>
@@ -61,4 +62,4 @@ export const NavBar = () => {
   )
 }
 
-export default  NavBar;
+export default NavBar
