@@ -5,7 +5,7 @@ import { CarritoContext } from "../context/CarritoContext"
 
 export const ComprasPage = () => {
 
-    const { reloj } = useContext( ProductosContext )
+    const { relojes } = useContext( ProductosContext )
 
     const { agregarCompra, eliminarCompra } = useContext(CarritoContext)
 

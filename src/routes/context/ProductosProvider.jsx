@@ -3,7 +3,7 @@ import ProductosContext from './ProductosContext';
 
 
 export const ProductosProvider = ({children}) => {
-    const [reloj, setReloj] = useState([
+    const [relojes, setRelojes] = useState([
         {
                       id: 1,
                       marca: "Zeppelin",
@@ -113,7 +113,7 @@ export const ProductosProvider = ({children}) => {
               ])
 
   return (
-    <ProductosContext.Provider value={{reloj}} > 
+    <ProductosContext.Provider value={{relojes}} > 
         {children}
     </ProductosContext.Provider>
     )

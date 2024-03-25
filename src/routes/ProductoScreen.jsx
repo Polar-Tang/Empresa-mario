@@ -8,7 +8,7 @@ import { CarritoContext } from './context/CarritoContext';
 import { ComprasPage } from './pages/ComprasPage3';
 
 const Productos = ( ) => {
-  const { reloj } = useContext( ProductosContext );
+  const { relojes } = useContext( ProductosContext );
 
 // atomic design es un enfoque de diseño de las interfaces de usuario la cual se basa en la creacion y organización de componentes reutilizables
     return (

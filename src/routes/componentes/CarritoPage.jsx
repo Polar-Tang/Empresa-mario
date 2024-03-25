@@ -6,7 +6,7 @@ export const CarritoPage = () => {
   const {listaCompras, aumentarCantidad, disminuirCantidad, eliminarCompra} = useContext(CarritoContext)
 
   const calcularTotal = () => {
-    return listaCompras.reduce((total, reloj) => total + reloj.precio * reloj.cantidad, 0 ).toFixed(2)
+    return listaCompras.reduce((total, item) => total + item.precio * item.cantidad, 0 ).toFixed(2)
 }
 
   return (
@@ -24,27 +24,27 @@ export const CarritoPage = () => {
   </thead>
   <tbody>
     {
-      listaCompras.map(reloj => (
-        <tr key={reloj.id}>
-        <th> {reloj.title}</th>
-        <td> {reloj.marca} </td>
-        <td> {reloj.modelo} </td>
+      listaCompras.map(item => (
+        <tr key={item.id}>
+        <th> {item.title}</th>
+        <td> {item.marca} </td>
+        <td> {item.modelo} </td>
         <td>
         <button 
                                     className="btn btn-ouline-primary" 
-                                    onClick={ () => disminuirCantidad(reloj.id)}
+                                    onClick={ () => disminuirCantidad(item.id)}
                                     >-</button>
-                                    <button className="btn btn-primary">{reloj.cantidad}</button>
+                                    <button className="btn btn-primary">{item.cantidad}</button>
                                     <button 
                                     className="btn btn-ouline-primary" 
-                                    onClick={ () => aumentarCantidad(reloj.id)}
+                                    onClick={ () => aumentarCantidad(item.id)}
                                     >+</button>
         </td>
-        <td>{ reloj.precio }</td>
+        <td>{ item.precio }</td>
         <td> <button
         type='button'
         className='btn btn-danger'
-        onClick={()=>eliminarCompra(reloj.id)}>
+        onClick={()=>eliminarCompra(item.id)}>
           Eliminar
           </button> </td>
       </tr>

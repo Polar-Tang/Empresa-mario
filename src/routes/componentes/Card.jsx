@@ -3,7 +3,7 @@ import { ProductosContext } from "../context/ProductosContext";
 
 export const Card = ({ handleAgregar, handleQuitar, handleAumentar, handleDisminuir, id }) => {
 
-  const { reloj } = useContext(ProductosContext);
+  const { relojes } = useContext(ProductosContext);
 
 
     const [added, setAdded] = useState(false)
@@ -19,7 +19,7 @@ export const Card = ({ handleAgregar, handleQuitar, handleAumentar, handleDismin
 
     return (
         <>
-        {reloj.map((reloj) => (
+        {relojes.map((reloj) => (
             <main key={reloj.id} className="card m-2" style={{ width: "18rem" }}>    
             <img 
              className="card-img-top"
