@@ -35,28 +35,32 @@ export const NavBar = () => {
       <input type="search" placeholder="Search"/>
       <button className="btn btn-outline-primary --bs-primary-bg-subtle" type="submit"><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
     </form>
-  <li className="nav-item anchor dropdown dropp drop-link rounded mx-auto d-block align-self-center   align-content">
+    <label htmlFor="category">
+  <li className="nav-item anchor dropdown dropp drop-link rounded mx-auto d-block align-self-center   align-content" >
       <a className="nav-link dropdown-toggle  anchor  rounded mx-auto d-block" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Nuestros productos
       </a>
   
-      <ul className="dropdown-menu z-3">
-        <img className='loguito' src={air}/><NavLink className="droping fs-6 anchor2" data-bs-toggle="dropdown" aria-expanded="false">Repuesto para aires acondicionados</NavLink>
+      <ul id="category" className="dropdown-menu z-3">
+        <img className='loguito' src={air}/><NavLink to='productos' value='air' className="droping fs-6 anchor2" data-bs-toggle="dropdown" aria-expanded="false">Repuesto para aires acondicionados</NavLink>
         <li><hr className="dropdown-divider"/></li>
-        <img className='loguito' src={ice}/><NavLink className="droping fs-6 anchor2" data-bs-toggle="dropdown" aria-expanded="false">Repuesto para heladeras</NavLink>
+        <img className='loguito' src={ice}/><NavLink to='productos' value='fridge' className="droping fs-6 anchor2" data-bs-toggle="dropdown" aria-expanded="false">Repuesto para heladeras</NavLink>
         <li><hr className="dropdown-divider"/></li>
         <li><FontAwesomeIcon icon={faClipboard} /><NavLink to='productos' className=" droping anchor2 fs-6">Más productos</NavLink></li> 
       </ul>
    </li>
+    </label>
+
    <li className="login-link align-self-center login float-end align-content">
       <NavLink className=" align-self-center droping anchor2 fs-6" href="#"><FontAwesomeIcon icon={faUser} />Login</NavLink></li>
    <NavLink to='/carrito' className='align-self-center carrito float-end rounded mx-auto d-block align-self-center'>
+
       <Badge badgeContent={listaCompras.length} color="secondary">
         <ShoppingCart color="action" />
       </Badge>
     </NavLink>
   </ul>
-  {/* </div>     */}
+  {/* </div>       //listaCompras.length  */}
 </nav>
     </>
   )

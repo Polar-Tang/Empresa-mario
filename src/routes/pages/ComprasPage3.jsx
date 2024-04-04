@@ -5,15 +5,11 @@ import { Card } from "../componentes/Card"
 
 export const ComprasPage = ( ) => {
 
-    const { relojes } = useContext( ProductosContext )
+    const { reloj, relojes } = useContext( ProductosContext )
 
     const { agregarCompra, eliminarCompra } = useContext(CarritoContext)
 
     const handleAgregar = (compra) =>{
-      // const compra = {
-      //   ...reloj,
-      //   cantidad: 1,
-      // };
       agregarCompra(compra)
     }
     const handleQuitar = (id) =>{
@@ -23,17 +19,21 @@ export const ComprasPage = ( ) => {
 
   return (
     <>
+    {relojes.map(reloj => (
+
     <Card  
-       key={reloj.id}
-       imagen={reloj.image}
-       titulo={reloj.title}
-       descripcion={reloj.description}
-       precio={reloj.price  }
+    marca={reloj.marca} 
+     id={reloj.id}
+      modelo={reloj.modelo} 
+      imagenUrl={reloj.imagenUrl} 
+      description={reloj.description}
+      title={reloj.title}
+      precio={reloj.precio}
        handleAgregar={() => handleAgregar(reloj)}
        handleQuitar={() => handleQuitar(reloj.id)}
-    // handleAgregar={handleAgregar}
-    // handleQuitar= {handleQuitar} 
-    />
+    ></Card>
+    ))}
+
     </>
   )
 }

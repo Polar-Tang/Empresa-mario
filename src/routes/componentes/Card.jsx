@@ -1,12 +1,20 @@
-import { useState, useContext } from "react"
+import { useState, useContext, useEffect } from "react"
 import { ProductosContext } from "../context/ProductosContext";
+// import { CarritoContext } from "../context/CarritoContext";
 
-export const Card = ({ handleAgregar, handleQuitar, handleAumentar, handleDisminuir, id }) => {
+export const Card = ({ id, marca ,handleAgregar, handleQuitar, modelo, imagenUrl, description, title, precio }) => {
 
-  const { relojes } = useContext(ProductosContext);
+  const { reloj } = useContext(ProductosContext);
 
-
+//   const { agregarCompra, eliminarCompra } = useContext(CarritoContext)
     const [added, setAdded] = useState(false)
+
+    useEffect(() => {
+        const storedAdded = localStorage.getItem('added');
+        if (storedAdded) {
+            setAdded(JSON.parse(storedAdded));
+        }
+    }, []);
 
     const clickAgregar = () => {
         handleAgregar()
@@ -14,21 +22,20 @@ export const Card = ({ handleAgregar, handleQuitar, handleAumentar, handleDismin
     }
     const clickQuitar = () => {
         handleQuitar()
-        setAdded(false)
+        setAdded(false , JSON.stringify(false))
     }
 
     return (
         <>
-        {relojes.map((reloj) => (
-            <main key={reloj.id} className="card m-2" style={{ width: "18rem" }}>    
+            <main key={id} className="card m-2" style={{ width: "18rem" }}>    
             <img 
              className="card-img-top"
-             src={reloj.imagenUrl}
-             alt={`${reloj.marca} ${reloj.modelo}`} />
+             src={imagenUrl}
+             alt={`un ${title} ${modelo}, ${marca}`} />
             <div className="card-body">
-                <h3 className="card-title">{reloj.title}, {reloj.marca}</h3>
-                <p className="tarjeta-descripcion">{reloj.description}, modelo {reloj.modelo} </p>
-                <p className="float-end">{reloj.precio}$</p>
+                <h3 className="card-title">{title}, {marca}</h3>
+                <p className="tarjeta-descripcion">{description}, modelo {modelo} </p>
+                <p className="float-end">{precio}$</p>
                 <div>
 
                 {added
@@ -50,7 +57,6 @@ export const Card = ({ handleAgregar, handleQuitar, handleAumentar, handleDismin
                 </div>
             </div>
             </main>
-         ))}
           </>
     )
 }
